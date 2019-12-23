@@ -1,26 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
+import styled, { keyframes } from 'styled-components';
+import { bounceInDown } from 'react-animations';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const bounceAnimation = keyframes`${bounceInDown}`;
+ 
+const Bounce = styled.div`
+  animation: 1.8s ${bounceAnimation};
+  color: white;
+  font-size: 35px;
+  box-shadow: 3px 3px 15px 0px grey; 
+`;
+
+export default class ReactAnimations extends Component {
+	render () {
+		return (
+			<Bounce><h1> ALA </h1></Bounce>
+		);
+	}
 }
-
-export default App;
