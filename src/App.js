@@ -1,21 +1,35 @@
 import React, { Component } from 'react';
-import './App.css';
-import styled, { keyframes } from 'styled-components';
-import { bounceInDown } from 'react-animations';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import './App.css'
 
-const bounceAnimation = keyframes`${bounceInDown}`;
+import Home from './components/Home';
+import NavBar from './components/NavBar';
+import About from './components/About';
+import Projects from './components/Projects';
+import Careers from './components/Careers';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
+import Error from './components/Error';
  
-const Bounce = styled.div`
-  animation: 1.8s ${bounceAnimation};
-  color: white;
-  font-size: 35px;
-  box-shadow: 3px 3px 15px 0px grey; 
-`;
-
-export default class ReactAnimations extends Component {
-	render () {
-		return (
-			<Bounce><h1> ALA </h1></Bounce>
-		);
-	}
+class App extends Component {
+  render() {
+    return (     
+	<BrowserRouter>
+	<div>
+	<NavBar />
+	  <Switch>
+		 <Route path="/" component={Home} exact/>
+		 <Route path="/about" component={About}/>
+		 <Route path="/projects" component={Projects}/>
+		 <Route path="/careers" component={Careers}/>
+		 <Route path="/contact" component={Contact}/>
+		<Route component={Error}/>
+	   </Switch>
+	<Footer />
+	</div> 
+  </BrowserRouter>
+    );
+  }
 }
+ 
+export default App;
