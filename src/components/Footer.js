@@ -3,8 +3,10 @@ import '../App.css'
 
 const Footer = () => {
     return (
-       <div className='footer'>       
-            <p>Copyright © 2020 Ahmed Lemseffer.</p>
+       <div> 
+            <p className='lang-FR'>FR</p>  
+            <p className='lang-EN'>EN</p>
+            <p className='footer'>Copyright © 2020 Ahmed Lemseffer.</p>
        </div>
     );
 }
