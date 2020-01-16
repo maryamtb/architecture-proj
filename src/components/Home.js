@@ -5,12 +5,16 @@ const Home = () => {
     var intro = {
         fontSize: '75px',
         display: 'inline-block',
-        fontWeight: 'regular',
         // backgroundImage: 'url(' + imgUrl + ')',
         WebkitTransition: 'all', // note the capital 'W' here
         msTransition: 'all', // 'ms' is the only lowercase vendor prefix
         fontFamily: 'Shadows Into Light',
         overflow: 'auto',
+    }
+
+    var subintro = {
+        fontSize: '27px',
+        fontWeight: 'light',
     }
     return (
        <div className='slside-down'>
@@ -25,8 +29,12 @@ const Home = () => {
             <animateMotion path="M 0 0 L 105 50" dur="1.1s" fill="freeze" />
             </text>
         </g>
+        <g transform="translate(380,380)">
+            <text id="TextElement" x="50" y="50" style={subintro}> ARCHITECTE
+            <animateMotion path="M 0 0 L 0 0" dur="1.1s" fill="freeze" />
+            </text>
+        </g>
         </svg>
-           
        </div>
     );
 }
