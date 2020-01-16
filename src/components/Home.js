@@ -3,9 +3,9 @@ import '../App.css'
 
 const Home = () => {
     return (
-       <div>
-            <h1>Home</h1>         
-            <p>This is the homepage</p>
+       <div className='slide-down'>
+            <h1>Ahmed Lemseffer</h1>         
+            <p>2020 Selected Works</p>
        </div>
     );
 }

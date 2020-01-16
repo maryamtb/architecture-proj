@@ -67,30 +67,39 @@ a {
 
 .sider {
   transform: rotate(270deg);
-  /* margin-left: -80px;
+  margin-left: -80px;
   position: fixed;
   margin-top: 290px;
   font-style: oblique;
-  font-size: 16px; */
+  font-size: 16px;
 } 
 
 div.slide-down {
   width:100%;
-  overflow:hidden;
+  /* overflow:hidden; */
 }
 div.slide-down p {
-  animation: slide-down 7s;
+  animation: slide-down 10s;
+  margin-top: 0%;
+}
+
+div.slide-down h1 {
+  animation: slide-down 5s;
   margin-top: 0%;
 }
 
 @keyframes slide-down {
   from {
-    margin-top: -10%;
-    height: 300%; 
+    margin-top: 0%;
+    height: 30%; 
   }
 
   to {
-    margin-top: 150%;
-    height: 100%;
+    margin-top: 10%;
+    height: 30%;
   }
+}
+
+.contact-form {
+  background-color: beige;
 }
