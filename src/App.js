@@ -4,6 +4,7 @@ import './App.css'
 
 import Home from './components/Home';
 import NavBar from './components/NavBar';
+import Subheader from './components/Subheader';
 import About from './components/About';
 import Projects from './components/Projects';
 import Careers from './components/Careers';
@@ -17,6 +18,7 @@ class App extends Component {
 	<BrowserRouter>
 	<div>
 	<NavBar />
+	<Subheader />
 	  <Switch>
 		 <Route path="/" component={Home} exact/>
 		 <Route path="/about" component={About}/>
