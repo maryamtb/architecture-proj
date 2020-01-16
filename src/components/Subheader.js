@@ -4,7 +4,7 @@ import '../App.css'
 const Subheader = () => {
     return (
        <div className='slide-dadfown'> 
-            <p className='sider'> ——— The art of Architecture ——— </p>
+            <p className='sider'> ———————— Index ———————— </p>
        </div>
     );
 }
