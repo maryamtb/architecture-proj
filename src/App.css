@@ -5,7 +5,7 @@ html {
 }
 
 .hamburgerDropDown {
-  line-height: 45px;
+  line-height: 85px;
   position: fixed;
   right: 0px;
   top: -20px;
@@ -15,8 +15,16 @@ html {
   text-decoration: none;
 }
 
+@keyframes hamburgerDropDown {
+  from {right: -40px;}
+  to {right: 0px;}
+}
+
+
+
 ul.hamburgerDropDown {
   padding: 20px;
+  animation: hamburgerDropDown 0.5s linear;
 }
 
 a {

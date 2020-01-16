@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css'
+import { ParallaxProvider } from 'react-scroll-parallax';
+
 
 import Home from './components/Home';
 import NavBar from './components/NavBar';
-import Subheader from './components/Subheader';
+// import Subheader from './components/Subheader';
 import About from './components/About';
 import Projects from './components/Projects';
 import Careers from './components/Careers';
@@ -14,11 +16,10 @@ import Error from './components/Error';
  
 class App extends Component {
   render() {
-    return (     
+    return (
+	<ParallaxProvider> 
 	<BrowserRouter>
-	<div>
 	<NavBar />
-	<Subheader />
 	  <Switch>
 		 <Route path="/" component={Home} exact/>
 		 <Route path="/about" component={About}/>
@@ -28,8 +29,8 @@ class App extends Component {
 		<Route component={Error}/>
 	   </Switch>
 	<Footer />
-	</div> 
-  </BrowserRouter>
+ 	</BrowserRouter>
+	</ParallaxProvider>
     );
   }
 }
