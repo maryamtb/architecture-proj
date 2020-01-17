@@ -20,8 +20,6 @@ html {
   to {right: 0px;}
 }
 
-
-
 ul.hamburgerDropDown {
   padding: 20px;
   animation: hamburgerDropDown 0.5s linear;

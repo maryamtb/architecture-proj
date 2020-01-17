@@ -6,7 +6,7 @@ import '../App.css';
 
 
 class NavBar extends Component {
-    constructor(){
+    constructor() {
         super()
         this.state = {
             open: false,

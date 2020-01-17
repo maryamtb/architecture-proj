@@ -5,7 +5,6 @@ import './App.css'
 
 
 import Home from './components/Home';
-// import NavBar from './components/NavBar';
 // import Subheader from './components/Subheader';
 import About from './components/About';
 import Projects from './components/Projects';
@@ -13,13 +12,14 @@ import Careers from './components/Careers';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Error from './components/Error';
+// import NavBar from './components/NavBar';
  
 class App extends Component {
   render() {
     return (
-	// <ParallaxProvider> 
+	<div>
+	
 	<BrowserRouter>
-	{/* <NavBar /> */}
 	  <Switch>
 		 <Route path="/" component={Home} exact/>
 		 <Route path="/about" component={About}/>
@@ -28,9 +28,10 @@ class App extends Component {
 		 <Route path="/contact" component={Contact}/>
 		<Route component={Error}/>
 	   </Switch>
+	   
 	<Footer />
  	</BrowserRouter>
-	// </ParallaxProvider>
+	</div>
     );
   }
 }
