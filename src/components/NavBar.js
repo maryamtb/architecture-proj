@@ -23,8 +23,8 @@ class NavBar extends Component {
             <HamburgerMenu
                     isOpen={this.state.open}
                     menuClicked={this.handleClick.bind(this)}
-                    width={30}
-                    height={15}
+                    width={40}
+                    height={20}
                     strokeWidth={2}
                     rotate={0}
                     color='black'

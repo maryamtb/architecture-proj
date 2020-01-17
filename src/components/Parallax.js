@@ -1,11 +1,11 @@
 import React from 'react';
 import { Parallax, Background } from 'react-parallax';
- 
+
 var intro = {
     fontSize: '75px',
     display: 'inline-block',
-    WebkitTransition: 'all', // note the capital 'W' here
-    msTransition: 'all', // 'ms' is the only lowercase vendor prefix
+    WebkitTransition: 'all',
+    msTransition: 'all',
     fontFamily: 'Shadows Into Light',
     overflow: 'auto',
 }
@@ -15,16 +15,9 @@ var subintro = {
     fontWeight: 'light',
 }
 
-const MyComponent = () => (
+const HomeParallax = () => (
     <div>
-        <Parallax
-            blur={10}
-            // bgImage={require('../logo.png')}
-            bgImageAlt="logo"
-            strength={200}
-        >
-            <div>
-            <svg width="1000" height="1000">
+            <svg width="1000" height="700">
                 <g transform="translate(30,20)">
                     <text id="TextElement" x="50" y="50" style={intro}>Ahmed
                     <animateMotion path="M -100 -10 L 465 290" dur="1s" fill="freeze" />
@@ -40,55 +33,65 @@ const MyComponent = () => (
                     <animateMotion path="M 0 0 L 0 0" dur="1.1s" fill="freeze" />
                     </text>
                 </g>
-                </svg>
-                {/* <h1 style={{margin: '0px'}}>Villa A</h1>
-                <h1>Villa B</h1> */}
-            </div>
-            <div style={{ height: '200px', width: '150px'  }} />
-        </Parallax>
+            </svg>
+      
         <Parallax
-            bgImage={'../logo.png'}
-            strength={400}
+            blur={{ min: -15, max: 15 }}
+            bgImage={require('./1.jpeg')}
+            strength={600}
+            style={{zIndex: '-10', position: 'absolute'}}
             renderLayer={percentage => (
                 <div
                     style={{
                         position: 'absolute',
-                        background: `rgba(225, 28, 0, ${percentage * 1})`,
+                        marginLeft: '100px',
+                        background: `rgba(0, 0, 0, ${percentage * 1})`,
                         left: '50%',
-                        top: '50%',
-                        width: percentage * 500,
-                        height: percentage * 500,
+                        top: '0%',
+                        width: percentage * 100,
+                        height: percentage * 20,
                     }}
                 />
             )}
         >
-            <p>... Contsdfasdfasdfent</p>
-            <div>
-                <h1 style={{margin: '500px'}}>Villa A</h1>
-                <h1 >Villa B</h1>
-            </div>
+            <svg height="80" width="300">
+  <g fill="none" stroke="black">
+    <path strokeWidth="4" d="M5 40 l215 0" />
+  </g>
+</svg>
+            <div style={{ height: '50px' }} />
+            <h1 >Villa A</h1>
+            <p>Casablanca, Morocco</p>
+
+            <img src={require('./2.jpeg')} style={{ height:'400px', width:'400px', marginLeft: '500px', marginBottom: '-300px', position: 'absolute'}}  alt={'1'}/>    
+            <img src={require('./a.jpg')} style={{ height:'400px', width:'400px', marginRight: '400px'}}  alt={'1'}/> 
+            
+
         </Parallax>
-        {/* -----dynamic blur-----
+
         <Parallax
             blur={{ min: -15, max: 15 }}
-            bgImage={require('../logo.png')}
+            bgImage={require('./3.jpg')}
             bgImageAlt="the dog"
-            strength={-200}
+            strength={500}
         >
-            Blur transition from min to max
-            <div style={{ height: '150px', width: '150px' }} />
-        </Parallax> */}
- 
-        -----custom background element-----
-        <Parallax strength={300}>
+            <div style={{ height: '100px' }} />
+            <h1>Villa B</h1>
+            <img src={require('./a.jpg')} style={{ height:'400px', width:'400px', marginLeft: '500px', marginBottom: '-300px', zIndex:10}}  alt={'1'}/>     
+            <img src={require('./2.jpeg')} style={{ height:'400px', width:'400px', marginRight: '400px'}}  alt={'1'}/>  
+        </Parallax>
+
+        {<Parallax strength={500}>
             <div>Use the background component for custom elements</div>
             <Background className="custom-bg">
-                <img src="http://www.fillmurray.com/500/320" alt="fill murray" />
+                <img src={require('./1.jpeg')}  alt={'1'}/> 
             </Background>
+
+            <img src={require('./2.jpeg')} style={{ height:'400px', width:'400px', marginLeft: '500px', marginBottom: '-200px'}}  alt={'1'}/>     
+
         </Parallax>
- 
-        {/* -----renderProp: "renderLayer"-----*/}
-        
-    </div>
+        }
+
+     </div> 
 );
-export default MyComponent;
+export default HomeParallax;

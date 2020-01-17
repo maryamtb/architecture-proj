@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css'
-import { ParallaxProvider } from 'react-scroll-parallax';
+// import { ParallaxProvider } from 'react-scroll-parallax';
 
 
 import Home from './components/Home';
@@ -17,7 +17,7 @@ import Error from './components/Error';
 class App extends Component {
   render() {
     return (
-	<ParallaxProvider> 
+	// <ParallaxProvider> 
 	<BrowserRouter>
 	{/* <NavBar /> */}
 	  <Switch>
@@ -30,9 +30,9 @@ class App extends Component {
 	   </Switch>
 	<Footer />
  	</BrowserRouter>
-	</ParallaxProvider>
+	// </ParallaxProvider>
     );
   }
 }
- 
+
 export default App;
