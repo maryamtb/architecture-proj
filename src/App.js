@@ -5,7 +5,7 @@ import { ParallaxProvider } from 'react-scroll-parallax';
 
 
 import Home from './components/Home';
-import NavBar from './components/NavBar';
+// import NavBar from './components/NavBar';
 // import Subheader from './components/Subheader';
 import About from './components/About';
 import Projects from './components/Projects';
@@ -19,7 +19,7 @@ class App extends Component {
     return (
 	<ParallaxProvider> 
 	<BrowserRouter>
-	<NavBar />
+	{/* <NavBar /> */}
 	  <Switch>
 		 <Route path="/" component={Home} exact/>
 		 <Route path="/about" component={About}/>
