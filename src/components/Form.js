@@ -17,8 +17,6 @@ const Form = () => {
         onError: {borderBottom: '1px solid green', ...stylized},
     }
 
-    const lessThan1000 = newValue => newValue < 1000
-    const email = newValue => (newValue).isEmail()
   
     const handleSubmit = (e) => { 
         alert(e) 
@@ -38,8 +36,6 @@ const Form = () => {
       return <h3 style={style}>{children}</h3>
     }
 
-  const check = newValue => newValue < 10;
-  const format = value => `${value} $`;
  
   return (
     <form onSubmit={handleSubmit} className="contact-form">

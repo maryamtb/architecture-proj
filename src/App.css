@@ -31,10 +31,16 @@ a {
   font-size: 18px;
 }
 
+.burger {
+  position: sticky;
+  z-index: 1;
+}
+
 .navbar div {
   left: 20px;
   top: 20px;
   position: fixed;
+
 }
 
 .navlogo {

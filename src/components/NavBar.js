@@ -19,17 +19,19 @@ class NavBar extends Component {
 
     displayHamburgerMenu = () => {
         return (
-            <HamburgerMenu
-                    isOpen={this.state.open}
-                    menuClicked={this.handleClick.bind(this)}
-                    width={40}
-                    height={20}
-                    strokeWidth={2}
-                    rotate={0}
-                    color='black'
-                    borderRadius={1}
-                    animationDuration={0.5}
-                />
+            <div className='burger'>
+                <HamburgerMenu
+                        isOpen={this.state.open}
+                        menuClicked={this.handleClick.bind(this)}
+                        width={40}
+                        height={20}
+                        strokeWidth={2}
+                        rotate={0}
+                        color='black'
+                        borderRadius={1}
+                        animationDuration={0.5}
+                    />
+            </div>
         )
     }
 
