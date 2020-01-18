@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import HamburgerMenu from 'react-hamburger-menu';
-import logo from '../logo.png';
 import '../App.css';
-
+import logo from '../logo.png';
 
 class NavBar extends Component {
     constructor() {

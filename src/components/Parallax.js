@@ -36,7 +36,7 @@ const HomeParallax = () => (
             </svg>
             <Parallax
             blur={{ min: -10, max: 15 }}
-            bgImage={require('../logo.png')}
+            bgImage={require('../whitebox.png')}
             strength={400}
             renderLayer={percentage => (
                 <div
@@ -88,7 +88,7 @@ const HomeParallax = () => (
         </Parallax>
         <Parallax
             blur={{ min: -25, max: 5 }}
-            bgImage={require('../logo.png')}
+            bgImage={require('../whitebox.png')}
             strength={400}
             renderLayer={percentage => (
                 <div

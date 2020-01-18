@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import './App.css'
+import './App.css';
 // import { ParallaxProvider } from 'react-scroll-parallax';
-
 
 import Home from './components/Home';
 // import Subheader from './components/Subheader';
@@ -12,13 +11,11 @@ import Careers from './components/Careers';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Error from './components/Error';
-// import NavBar from './components/NavBar';
  
 class App extends Component {
   render() {
     return (
 	<div>
-	
 	<BrowserRouter>
 	  <Switch>
 		 <Route path="/" component={Home} exact/>
@@ -28,7 +25,6 @@ class App extends Component {
 		 <Route path="/contact" component={Contact}/>
 		<Route component={Error}/>
 	   </Switch>
-	   
 	<Footer />
  	</BrowserRouter>
 	</div>
