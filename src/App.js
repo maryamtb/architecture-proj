@@ -1,16 +1,13 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
-// import { ParallaxProvider } from 'react-scroll-parallax';
 
-import Home from './components/Home';
-// import Subheader from './components/Subheader';
-import About from './components/About';
-import Projects from './components/Projects';
-import Careers from './components/Careers';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
-import Error from './components/Error';
+import HomePage from './pages/home/homepage.component';
+import AboutPage from './pages/about/aboutpage.component';
+import ProjectsPage from './pages/projects/projectspage.component';
+import CareersPage from './pages/careers/careerspage.component';
+import ContactPage from './pages/contact/contactpage.component';
+import ErrorPage from './pages/error/errorpage.component';
  
 class App extends Component {
   render() {
@@ -18,14 +15,13 @@ class App extends Component {
 	<div>
 	<BrowserRouter>
 	  <Switch>
-		 <Route path="/" component={Home} exact/>
-		 <Route path="/about" component={About}/>
-		 <Route path="/projects" component={Projects}/>
-		 <Route path="/careers" component={Careers}/>
-		 <Route path="/contact" component={Contact}/>
-		<Route component={Error}/>
+		 <Route exact path="/" component={HomePage} />
+		 <Route path="/about" component={AboutPage}/>
+		 <Route path="/projects" component={ProjectsPage}/>
+		 <Route path="/careers" component={CareersPage}/>
+		 <Route path="/contact" component={ContactPage}/>
+		<Route component={ErrorPage}/>
 	   </Switch>
-	<Footer />
  	</BrowserRouter>
 	</div>
     );
